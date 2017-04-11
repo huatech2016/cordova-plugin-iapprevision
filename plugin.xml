@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-iapprevision"
+        version="1.0.0">
+
+    <name>iapprevision Plugin</name>
+    <description>iapprevision for cordova plugin</description>
+    <author>huatech</author>
+    <keywords>iaarevision</keywords>
+    <license>MIT License</license>
+
+
+
+    <engines>
+        <engine name="cordova" version=">=3.0" />
+    </engines>
+
+    <!-- dependencies -->
+    <dependency id="cordova-plugin-device" />
+
+    <js-module src="www/iappRevisionPlugin.js" name="IAppRevisionPlugin">
+        <clobbers target="IAppRevisionPlugin" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IAppRevisionPlugin">
+                <param name="android-package" value="com.kinggrid.plugin.iapprevisionplugin" />
+            </feature>
+        </config-file>
+
+
+        <source-file src="src/android/IAppRevisionPlugin.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <!-- Required  一些系统要求的权限，如访问网络等-->
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <!-- Required SDK核心功能-->
+            <!--activity service -->
+        </config-file>
+
+        <source-file src="src/android/libs/iAppRevision_V3.0.0.112.jar" target-dir="libs" />
+
+        <!--<source-file src="src/android/res/drawable-xxhdpi/bg_close.xml" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_clear.xml" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_redo.xml" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_pen.xml" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_save.xml" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_undo.xml" target-dir="res/drawable" />
+
+        <source-file src="src/android/res/drawable-xxhdpi/ballpen.pngbg_redo_n.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_redo_p.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_undo_p.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_save_p.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_signature1.9.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_clear_p.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_undo_n.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_close_p.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/brushpen.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_close_n.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/bg_pen_p.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/pencil.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/waterpen.png" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/" target-dir="res/drawable-xxhdpi" />
+        <source-file src="src/android/res/drawable-xxhdpi/" target-dir="res/drawable-xxhdpi" />-->
+    </platform>
+</plugin>
