@@ -32,9 +32,9 @@ IAppRevisionPlugin.prototype.init = function () {
   }
 }
 
-IAppRevisionPlugin.prototype.getRevisionInfoFromNet = function (recordId,user_name) {
+IAppRevisionPlugin.prototype.getRevisionInfoFromNet = function (success,recordId,user_name) {
   if (device.platform == 'Android') {
-    this.call_native('getRevisionInfoFromNet', [recordId, user_name], null)
+    this.call_native(success,this.error_callback,'getRevisionInfoFromNet', [recordId, user_name], null)
   }
 }
 
