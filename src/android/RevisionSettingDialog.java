@@ -1,4 +1,4 @@
-package com.kinggrid.plugin.iapprevisionplugin.view;
+package com.kinggrid.plugin.iapprevisionplugin;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -27,7 +27,8 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
 import com.kinggrid.iapprevision.iAppRevisionView;
-import com.kinggrid.plugin.iapprevisionplugin.R;
+//import com.kinggrid.plugin.iapprevisionplugin.R;
+import huatech.gov.slt.R;
 /**
  * 设置类
  * com.kinggrid.iapprevisiondemo.view.RevisionSettingDialog
@@ -197,7 +198,7 @@ public class RevisionSettingDialog {
 				}
 			}
 		});
-		final RelativeLayout.LayoutParams linearParams = (RelativeLayout.LayoutParams) lineshow
+		final LayoutParams linearParams = (LayoutParams) lineshow
 				.getLayoutParams(); // 取控件textView当前的布局参数
 		linearParams.height = (int) (penSize/1.5);
 		lineshow.setLayoutParams(linearParams);
@@ -434,10 +435,10 @@ public class RevisionSettingDialog {
 	
 	private OnSignChangedListener signChangedListener;
 	public interface OnSignChangedListener {
-		void changed(int color,int size,int type);
+		void changed(int color, int size, int type);
 	}
 	private OnWordChangedListener wordChangedListener;
 	public interface OnWordChangedListener {
-		void changed(int color,int size);
+		void changed(int color, int size);
 	}
 }

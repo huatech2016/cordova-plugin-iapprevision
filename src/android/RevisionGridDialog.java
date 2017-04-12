@@ -1,4 +1,4 @@
-package com.kinggrid.plugin.iapprevisionplugin.view;
+package com.kinggrid.plugin.iapprevisionplugin;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -19,8 +19,8 @@ import com.kinggrid.iapprevision.RevisionEntity;
 import com.kinggrid.iapprevision.iAppRevisionEditView;
 import com.kinggrid.iapprevision.iAppRevisionView;
 import com.kinggrid.plugin.iapprevisionplugin.OnFinishListener;
-import com.kinggrid.plugin.iapprevisionplugin.R;
-import com.kinggrid.plugin.iapprevisionplugin.view.RevisionSettingDialog.OnSignChangedListener;
+import huatech.gov.slt.R;
+import com.kinggrid.plugin.iapprevisionplugin.RevisionSettingDialog.OnSignChangedListener;
 /**
  * 米字格手写签批
  * com.kinggrid.iapprevisiondemo.view.RevisionGridDialog

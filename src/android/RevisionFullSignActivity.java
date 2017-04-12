@@ -1,11 +1,11 @@
-package com.kinggrid.plugin.iapprevisionplugin.view;
+package com.kinggrid.plugin.iapprevisionplugin;
 
 import java.io.ByteArrayOutputStream;
 
 import com.kinggrid.iapprevision.iAppRevisionView;
 import com.kinggrid.plugin.iapprevisionplugin.IConstant;
-import com.kinggrid.plugin.iapprevisionplugin.view.RevisionSettingDialog.OnSignChangedListener;
-import com.kinggrid.plugin.iapprevisionplugin.R;
+import com.kinggrid.plugin.iapprevisionplugin.RevisionSettingDialog.OnSignChangedListener;
+import huatech.gov.slt.R;
 
 import android.app.Activity;
 import android.content.Context;

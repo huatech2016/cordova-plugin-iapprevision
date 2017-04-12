@@ -1,4 +1,4 @@
-package com.kinggrid.plugin.iapprevisionplugin.view;
+package com.kinggrid.plugin.iapprevisionplugin;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -29,9 +29,12 @@ import com.kinggrid.iapprevision.RevisionEntity;
 import com.kinggrid.iapprevision.iAppRevisionView;
 import com.kinggrid.plugin.iapprevisionplugin.IConstant;
 import com.kinggrid.plugin.iapprevisionplugin.OnFinishListener;
-import com.kinggrid.plugin.iapprevisionplugin.R;
-import com.kinggrid.plugin.iapprevisionplugin.view.RevisionSettingDialog.OnSignChangedListener;
-import com.kinggrid.plugin.iapprevisionplugin.view.RevisionSettingDialog.OnWordChangedListener;
+import com.kinggrid.plugin.iapprevisionplugin.RevisionSettingDialog.OnSignChangedListener;
+import com.kinggrid.plugin.iapprevisionplugin.RevisionSettingDialog.OnWordChangedListener;
+import huatech.gov.slt.R;
+
+import huatech.gov.slt.R;
+
 /**
  * 普通手写签批窗口
  * com.kinggrid.iapprevisiondemo.view.RevisionNormalDialog
@@ -40,7 +43,7 @@ import com.kinggrid.plugin.iapprevisionplugin.view.RevisionSettingDialog.OnWordC
  */
 public class RevisionNormalDialog implements OnClickListener,IConstant{
 
-	private static final String TAG = "RevisionWindowIntersected";
+	private static final String TAG = "KingGridPlugin";
 //	private PopupWindow revision_dialog;
 	private Activity activity;
 	private String copyRight;
@@ -399,12 +402,14 @@ public class RevisionNormalDialog implements OnClickListener,IConstant{
 		mix_img.setVisibility(View.GONE);
 		mix_sign.setVisibility(View.VISIBLE);
 		mix_word.setVisibility(View.VISIBLE);
+/// comment for remove bug
+//		Bitmap stamp_file_bitmap = BitmapFactory.decodeResource(activity.getResources(), R.drawable.kinggrid_demo);
+//		if(stamp_file_bitmap != null){
+//			demo_revision_view.setImageScaleType(ScaleType.FIT_CENTER);
+//			demo_revision_view.showRevisionImage(stamp_file_bitmap, false);
+//		}
+/// comment for remove bug
 
-		Bitmap stamp_file_bitmap = BitmapFactory.decodeResource(activity.getResources(), R.drawable.kinggrid_demo);
-		if(stamp_file_bitmap != null){
-			demo_revision_view.setImageScaleType(ScaleType.FIT_CENTER);
-			demo_revision_view.showRevisionImage(stamp_file_bitmap, false);
-		}
 //		ImportSignatureDialog signatureDialog = new ImportSignatureDialog(webRevision, url,WebRevisionActivity.this, revisionView1.getWidth(), revisionView2.getHeight(), user_name);
 //		signatureDialog.setSignatureListener(new OnSignatureListener() {
 //			

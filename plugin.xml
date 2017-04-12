@@ -31,7 +31,13 @@
         </config-file>
 
 
-        <source-file src="src/android/IAppRevisionPlugin.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+        <source-file src="src/android/IConstant.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+        <source-file src="src/android/OnFinishListener.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+        <source-file src="src/android/RevisionFullSignActivity.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+        <source-file src="src/android/RevisionGridDialog.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+        <source-file src="src/android/RevisionNormalDialog.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+        <source-file src="src/android/RevisionSettingDialog.java" target-dir="src/com/kinggrid/plugin/iapprevisionplugin" />
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <!-- Required  一些系统要求的权限，如访问网络等-->
             <uses-permission android:name="android.permission.INTERNET" />
